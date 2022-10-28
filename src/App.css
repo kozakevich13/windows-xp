@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-color: #61dafb;
+  background-image: url('../public/background_xp.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
@@ -14,7 +20,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
