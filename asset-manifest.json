@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/windows-xp/static/css/main.073c9b0a.css",
-    "main.js": "/windows-xp/static/js/main.0b1bfc80.js",
+    "main.css": "/windows-xp/static/css/main.9df30b35.css",
+    "main.js": "/windows-xp/static/js/main.222f948c.js",
     "static/js/787.04b25fa3.chunk.js": "/windows-xp/static/js/787.04b25fa3.chunk.js",
     "static/media/logo.svg": "/windows-xp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/windows-xp/index.html",
-    "main.073c9b0a.css.map": "/windows-xp/static/css/main.073c9b0a.css.map",
-    "main.0b1bfc80.js.map": "/windows-xp/static/js/main.0b1bfc80.js.map",
+    "main.9df30b35.css.map": "/windows-xp/static/css/main.9df30b35.css.map",
+    "main.222f948c.js.map": "/windows-xp/static/js/main.222f948c.js.map",
     "787.04b25fa3.chunk.js.map": "/windows-xp/static/js/787.04b25fa3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0b1bfc80.js"
+    "static/css/main.9df30b35.css",
+    "static/js/main.222f948c.js"
   ]
 }
