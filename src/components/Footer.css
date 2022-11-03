@@ -1,0 +1,61 @@
+.footer {
+    height: 26px;
+    width: 100%;
+    background-color:#c2c3ba;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    border-top: solid 2px white;
+}
+
+.icons-menu {
+    position:absolute; 
+    right:0;
+    background-color: #c0c0c0;
+    border-top: solid 2px #808080;
+    border-left: solid 2px #808080;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+    height: 23px;
+    margin-top: auto;
+    margin-bottom: auto;
+    min-width: 100px;
+    
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 23px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn-start {
+    display: flex;
+    width: 60px;
+    height: 23px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    padding-top: 3px;
+    background-color:#c2c3ba;
+    border: solid 2px;
+    border-top: solid 2px white;
+    border-left: solid 2px white;
+}
+
+.taskbar-icons {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.taskbar-time {
+    position: relative;
+    bottom: 4px;
+}
+
+
+
