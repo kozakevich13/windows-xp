@@ -1,0 +1,151 @@
+.notepad {
+    height: 34px;
+    width: 34px;
+    background-image: url('https://98.js.org/images/icons/notepad-32x32.png');
+    margin: 10px;
+    border: none;
+    background-color: #048383;
+}
+
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+  }
+  .react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top;
+  }
+  .react-grid-item.cssTransforms {
+    transition-property: transform;
+  }
+  .react-grid-item.resizing {
+    z-index: 1;
+    will-change: width, height;
+  }
+  
+  .react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 3;
+    will-change: transform;
+  }
+  
+  .react-grid-item.react-grid-placeholder {
+    background: red;
+    opacity: 0.2;
+    transition-duration: 100ms;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  .react-grid-item > .react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+  }
+  
+  .react-grid-item > .react-resizable-handle::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  }
+  
+  .react-grid-item:not(.react-grid-placeholder) {
+    background: grey;
+  }
+  
+  .window-header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+  }
+  
+  .logo-container {
+    overflow: hidden;
+  }
+  
+  .app-name {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+  }
+  
+  .actions-container {
+    display: flex;
+    padding-top: 3px;
+  }
+  
+  .icon {
+    color: black;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  
+  .window-button-style {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    transition: background-color 150ms ease;
+  }
+  
+  .window-controls-icon {
+    pointer-events: none;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+    transition: fill 150ms ease;
+  }
+  
+  .settings-window:hover {
+    background-color: orange;
+  }
+  
+  .close-window:hover {
+    background-color: #e6004c;
+  }
+  
+  .settings-window:focus {
+    outline: none;
+  }
+  
+  .close-window:focus {
+    outline: none;
+  }
+  
+  .addButton:hover {
+    letter-spacing: 0.8em;
+    background-color: lightskyblue;
+    cursor: pointer;
+  }
+  
+  .addButton {
+    height: 4em;
+    width: 10%;
+    min-width: 120px;
+    padding: 1.5em auto;
+    margin: 1em auto;
+    background-color: lightblue;
+    border: none;
+    font-size: 12px !important;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
