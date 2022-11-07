@@ -11,32 +11,42 @@ import React, { useEffect, useState } from "react";
 function App() {
 
   const [isLoding, setIsLoding] = useState(true);
+  const [textLoader, setTextLoader] = useState('Loading...')
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoding(false);
+      // setIsLoding(false);
+      setTextLoader('Сlick anywhere')
     }, 5000);
   }, []);
+
+  function unLock() {
+    setIsLoding(false);
+  }
   return (
     <div className="App">
 
-{isLoding ? (
-        <LoadingScreen
+      {isLoding ? (
+        <div onClick={()=>{unLock()}}>
+          <p>sasdsda</p>
+          <LoadingScreen
           loading={true}
-          bgColor="#f1f1f1"
-          spinnerColor="#9ee5f8"
+          bgColor="white"
+          // spinnerColor="#9ee5f8"
           textColor="#676767"
           logoSrc={spinner}
-          text="Loading..."
+          text={textLoader}
         />
-      ) : (
-        <>
-           <Display/>
-           <Footer/>
-           <Music/>
-        </>
-       
-      )}
+        </div>
+        ) : (
+          <>
+            <Display/>
+            <Footer/>
+            <Music/>
+          </>
+        
+        )
+      }
 
      
     </div>
