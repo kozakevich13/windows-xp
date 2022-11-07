@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/windows-xp/static/css/main.9cd26d93.css",
-    "main.js": "/windows-xp/static/js/main.920eb755.js",
+    "main.js": "/windows-xp/static/js/main.520dd92e.js",
     "static/js/787.04b25fa3.chunk.js": "/windows-xp/static/js/787.04b25fa3.chunk.js",
+    "static/media/sound.wav": "/windows-xp/static/media/sound.b57d8cd3980dcc53f97e.wav",
     "index.html": "/windows-xp/index.html",
     "main.9cd26d93.css.map": "/windows-xp/static/css/main.9cd26d93.css.map",
-    "main.920eb755.js.map": "/windows-xp/static/js/main.920eb755.js.map",
+    "main.520dd92e.js.map": "/windows-xp/static/js/main.520dd92e.js.map",
     "787.04b25fa3.chunk.js.map": "/windows-xp/static/js/787.04b25fa3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cd26d93.css",
-    "static/js/main.920eb755.js"
+    "static/js/main.520dd92e.js"
   ]
 }
