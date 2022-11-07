@@ -1,12 +1,10 @@
 import './Display.css';
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-// import "./styles.css";
-import { Widgets } from "@material-ui/icons";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const useStyles = makeStyles({
@@ -128,20 +126,9 @@ function Display() {
         h: addedLayout.h
       })
     );
-    // console.log(11, (widget.length * 2) % 12);
-    const newWidgets = widget.filter((x) =>
-      widgetsState[x.name] ? widget : null
-    );
+ 
     setWidgetsState({ ...widgetsState, [item.name]: true });
 
-    // setWidget(
-    //   widget.concat({
-    //     id: widget[widget.length - 1].id + 1,
-    //     name: `n${newCounter}`
-    //   })
-    // );
-
-    // console.log(2, layout[layout.length - 1]);
   };
 
   const removeWidget = (item) => {
