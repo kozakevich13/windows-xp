@@ -1,8 +1,8 @@
 import './Footer.css';
 import { useState } from 'react';
-import Music from './Background-song/Music';
-import start from '../img/start.png'
-import scheduler from '../img/scheduler.png'
+import Music from '../Background-song/Music';
+import start from '../../img/start.png'
+import scheduler from '../../img/scheduler.png'
 
 function Footer() {
   
