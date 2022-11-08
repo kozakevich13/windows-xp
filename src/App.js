@@ -1,5 +1,4 @@
 import './App.css';
-import Music from './components/Background-song/Music';
 import Display from './components/Desplay/Display';
 import Footer from './components/Footer';
 import LoadingScreen from "react-loading-screen";
