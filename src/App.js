@@ -33,7 +33,6 @@ function App() {
         <>
            <Display/>
            <Footer/>
-           <Music/>
         </>
        
       )}

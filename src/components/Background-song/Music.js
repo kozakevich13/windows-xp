@@ -1,6 +1,7 @@
 import sound from '../../assets/sound.wav';
 import React, { useState } from "react";
 import Sound from "react-sound";
+import './Music.css'
 
 
 
@@ -24,7 +25,7 @@ function Music() {
 
   return (
     <div className='music'>
-       <button onClick={handleSoundPlay}>Sound {OnOff}</button>
+       <button  className='volume-icons' alt='windows-volume' src='https://98.js.org/images/icons/audio-okay-16x16.png' onClick={handleSoundPlay}></button>
       <Sound
         url={sound}
         autoLoad="true"
