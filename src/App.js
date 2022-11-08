@@ -1,5 +1,5 @@
 import './App.css';
-import Display from './components/Desplay/Display';
+import Display from './components/Display/Display';
 import Footer from './components/Footer';
 import LoadingScreen from "react-loading-screen";
 import spinner from "../src/assets/loading-windows98.gif";
