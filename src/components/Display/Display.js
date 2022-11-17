@@ -1,9 +1,10 @@
 import './Display.css';
+import notepad from '../../img/notepad.png'
+import folder from '../../img/folder.png'
+import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
-import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -25,7 +26,8 @@ const useStyles = makeStyles({
   },
   actionsContainer: {
     display: "flex",
-    paddingTop: 3
+    paddingTop: 1,
+    paddingRight: 5
   },
   settingsWindow: {
     "&:hover": {
@@ -44,7 +46,8 @@ const useStyles = makeStyles({
   },
   closeWindow: {
     "&:hover": {
-      backgroundColor: "red"
+      backgroundColor: "red",
+      border: "solid 2px bleck"
     },
     "&:focus": {
       outline: "none"
@@ -80,21 +83,15 @@ const useStyles = makeStyles({
 });
 
 const initialWidgetsList = [
-  { id: 1, name: "One" },
-  { id: 2, name: "Two" },
-  { id: 3, name: "Three" }
+  { id: 1, name: "Notepad", content: "app Notepad" },
+  { id: 2, name: "My documents", content: "app My documents" },
+  { id: 3, name: "Folder", content: "app Folder" }
 ];
 
 const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
   { i: "3", x: 8, y: 0, w: 4, h: 2 }
-  // { i: "4", x: 0, y: 3, w: 5, h: 2 },
-  // { i: "5", x: 5, y: 3, w: 3, h: 2 },
-  // { i: "6", x: 8, y: 3, w: 4, h: 2 },
-  // { i: "7", x: 0, y: 6, w: 5, h: 2 },
-  // { i: "8", x: 5, y: 6, w: 3, h: 2 },
-  // { i: "9", x: 8, y: 6, w: 4, h: 2 }
 ];
 
 
@@ -106,7 +103,7 @@ function Display() {
     Three: true
   });
 
-  const [layout, setlayout] = useState(initialLayout);
+  const [layout, setlayout] = useState([]);
   const [newCounter, setNewCounter] = useState(0);
 
   const addWidget = (item) => {
@@ -114,7 +111,6 @@ function Display() {
     const addedLayout = initialLayout.find(
       (x) => Number(x.i) === Number(item.id)
     );
-    // console.log(12, layout[layout.length - 1].x);
     setlayout(
       layout.concat({
         i: String(addedLayout.i),
@@ -124,11 +120,10 @@ function Display() {
         minY: addedLayout.y,
         w: addedLayout.w,
         h: addedLayout.h
+        
       })
     );
- 
     setWidgetsState({ ...widgetsState, [item.name]: true });
-
   };
 
   const removeWidget = (item) => {
@@ -147,31 +142,29 @@ function Display() {
     setWidget(newWidgets);
   }, [widgetsState]);
 
-  console.log(layout);
 
   const WidgetHeader = (item) => {
-    const classes = useStyles();
+    console.log(item.item.name)
     return (
       <>
         <div className={classes.windowHeader}>
           <div className={classes.logoContainer}>
-            <span className={classes.appName}>Widget Name</span>
-            <span className={classes.appName}>(Last Updated)</span>
+            <span className={classes.appName}>{item.item.name}</span>
           </div>
           <div className={classes.actionsContainer}>
-            <button className={classes.settingsWindow} type="button">
+            {/* <button className={classes.settingsWindow} type="button">
               <div className={classes.windowControlsIcon}>
                 <SettingsIcon />
               </div>
-            </button>
+            </button> */}
             <button
               className={classes.closeWindow}
               type="button"
               onClick={() => removeWidget(item.item)}
             >
-              <div className={classes.windowControlsIcon}>
-                <CloseIcon />
-              </div>
+              {/* <div className='windowControlsIcon'> */}
+                <CloseIcon className='windowControlsIcon' />
+              {/* </div> */}
             </button>
           </div>
         </div>
@@ -181,37 +174,59 @@ function Display() {
   const classes = useStyles();
 
   return (
-    <>
-      {initialWidgetsList.map((item) => (
-        <Button
-          className={classes.addButton}
-          variant="outlined"
-          color="primary"
-          type="button"
-          onClick={() => addWidget(item)}
-        >
-          Add Widget {item.name}
-        </Button>
-      ))}
+    <div className='main-container' >
+        <div className='all-icons'>
+          <div className='grid-icons'>
+            <button
+              className='icon'
+              type="button"
+              onClick={() => addWidget(initialWidgetsList[0])}
+              style={{ backgroundImage: `url(${notepad})` }}
+            />
+            <p className='icons-name'>Notepad</p>
+          </div>
 
+          <div className='grid-icons'>
+            <button
+              className='icon'
+              type="button"
+              onClick={() => addWidget(initialWidgetsList[1])}
+              style={{ backgroundImage: `url(${myDocumentFolder})` }}
+            />
+            <p className='icons-name'>My Documents</p>
+          </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[2])}
+                style={{ backgroundImage: `url(${folder})` }}
+              />
+             <p className='icons-name'>Folder</p>
+          </div>
+        </div>
+       
       <ResponsiveGridLayout
         layouts={{ lg: layout }}
         measureBeforeMount
         className="layout"
-        isDragable
+        isDraggable
         isResizable
         margin={[20, 20]}
+        allowOverlap={true}
       >
         {widget.map((item, i) => {
           return (
             <div key={item.id} className="grid-item">
               <WidgetHeader item={item} />
-              {item.name}
+              <h2>{item.name}</h2>
+              <p>{item.content}</p>
             </div>
           );
         })}
       </ResponsiveGridLayout>
-    </>
+    </div>
   );
 }
 

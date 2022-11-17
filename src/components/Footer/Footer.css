@@ -9,6 +9,7 @@
 }
 
 .icons-menu {
+    display: flex;
     position:absolute; 
     right:0;
     background-color: #c0c0c0;
@@ -46,15 +47,37 @@
     border-left: solid 2px white;
 }
 
-.taskbar-icons {
+.btn-start:hover {
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+}
+
+.taskbar-calendar {
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 2px;
+    width: 17px;
+    height: 17px;
+    border: solid 1px #c0c0c0;
+
+}
+
+.taskbar-calendar:hover {
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white; 
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .taskbar-time {
     position: relative;
     bottom: 4px;
+    margin-top: 5px;
 }
 
 

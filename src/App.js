@@ -1,7 +1,6 @@
 import './App.css';
-import Music from './components/Background-song/Music';
-import Display from './components/Desplay/Display';
-import Footer from './components/Footer';
+import Display from './components/Display/Display';
+import Footer from './components/Footer/Footer';
 import LoadingScreen from "react-loading-screen";
 import spinner from "../src/assets/loading-windows98.gif";
 import React, { useEffect, useState } from "react";
@@ -37,16 +36,13 @@ function App() {
           logoSrc={spinner}
           text={textLoader}
         />
-        </div>
-        ) : (
-          <>
-            <Display/>
-            <Footer/>
-            <Music/>
-          </>
-        
-        )
-      }
+      ) : (
+        <>
+           <Display/>
+           <Footer/>
+        </>
+       
+      )}
 
      
     </div>

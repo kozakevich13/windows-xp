@@ -1,12 +1,10 @@
 import './Footer.css';
 import { useState } from 'react';
-
-
-
-
+import Music from '../Background-song/Music';
+import start from '../../img/start.png'
+import scheduler from '../../img/scheduler.png'
 
 function Footer() {
-
   
 const [time, setTime] = useState('')
 function say() {
@@ -23,15 +21,15 @@ function getActualtime() {
   return (
     <div className='footer'>
         <button  className='btn-start' onClick={()=>{say()}}>
-                <img alt='windows-logo' src='https://98.js.org/images/start.png'/>
+                <img alt='windows-logo' src={start}/>
                 <b>Start</b>
         </button>
         <div className="vl"></div>
         <div className='tasks'>
         </div>
         <div className='icons-menu'>
-            <img className='taskbar-icons' alt='windows-volume' src='https://98.js.org/images/icons/audio-okay-16x16.png'/>
-            <img className='taskbar-icons' alt='windows-calendar' src='https://98.js.org/images/icons/task-scheduler-16x16.png'/>
+            <Music/>
+            <img className='taskbar-calendar' alt='windows-calendar' src={scheduler}/>
             <time className='taskbar-time'>{time}</time> 
         </div>
     </div>
