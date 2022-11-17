@@ -80,7 +80,7 @@ const useStyles = makeStyles({
 });
 
 const initialWidgetsList = [
-  { id: 1, name: "One" },
+  { id: 1, name: "One1" },
   { id: 2, name: "Two" },
   { id: 3, name: "Three" }
 ];
@@ -89,12 +89,6 @@ const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
   { i: "3", x: 8, y: 0, w: 4, h: 2 }
-  // { i: "4", x: 0, y: 3, w: 5, h: 2 },
-  // { i: "5", x: 5, y: 3, w: 3, h: 2 },
-  // { i: "6", x: 8, y: 3, w: 4, h: 2 },
-  // { i: "7", x: 0, y: 6, w: 5, h: 2 },
-  // { i: "8", x: 5, y: 6, w: 3, h: 2 },
-  // { i: "9", x: 8, y: 6, w: 4, h: 2 }
 ];
 
 
@@ -114,7 +108,6 @@ function Display() {
     const addedLayout = initialLayout.find(
       (x) => Number(x.i) === Number(item.id)
     );
-    // console.log(12, layout[layout.length - 1].x);
     setlayout(
       layout.concat({
         i: String(addedLayout.i),
@@ -124,6 +117,7 @@ function Display() {
         minY: addedLayout.y,
         w: addedLayout.w,
         h: addedLayout.h
+        
       })
     );
  
@@ -147,7 +141,6 @@ function Display() {
     setWidget(newWidgets);
   }, [widgetsState]);
 
-  console.log(layout);
 
   const WidgetHeader = (item) => {
     const classes = useStyles();
@@ -196,6 +189,7 @@ function Display() {
 
       <ResponsiveGridLayout
         layouts={{ lg: layout }}
+        breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         measureBeforeMount
         className="layout"
         isDragable
