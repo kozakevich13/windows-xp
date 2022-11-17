@@ -1,3 +1,7 @@
+body {
+  font-family: 'Microsoft Sans Serif', sans-serif;
+}
+
 .App {
   display: block;
   background-color: #048383;

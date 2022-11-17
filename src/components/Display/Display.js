@@ -1,9 +1,11 @@
 import './Display.css';
+import notepad from '../../img/notepad.png'
+import folder from '../../img/folder.png'
+import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -100,7 +102,7 @@ function Display() {
     Three: true
   });
 
-  const [layout, setlayout] = useState(initialLayout);
+  const [layout, setlayout] = useState([]);
   const [newCounter, setNewCounter] = useState(0);
 
   const addWidget = (item) => {
@@ -175,17 +177,43 @@ function Display() {
 
   return (
     <>
-      {initialWidgetsList.map((item) => (
-        <Button
-          className={classes.addButton}
-          variant="outlined"
-          color="primary"
-          type="button"
-          onClick={() => addWidget(item)}
-        >
-          Add Widget {item.name}
-        </Button>
-      ))}
+        <div className='all-icons'>
+          <div className='grid-icons'>
+            <button
+              className='icon'
+              type="button"
+              onClick={() => addWidget(initialWidgetsList[0])}
+              style={{ backgroundImage: `url(${notepad})` }}
+            />
+            <p className='icons-name'>Notepad</p>
+          </div>
+
+          <div className='grid-icons'>
+            <button
+              className='icon'
+              type="button"
+              onClick={() => addWidget(initialWidgetsList[1])}
+              style={{ backgroundImage: `url(${myDocumentFolder})` }}
+            />
+            <p className='icons-name'>My Documents</p>
+          </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[2])}
+                style={{ backgroundImage: `url(${folder})` }}
+              />
+             <p className='icons-name'>Folder</p>
+          </div>
+          
+
+         
+        </div>
+       
+        
+      
 
       <ResponsiveGridLayout
         layouts={{ lg: layout }}

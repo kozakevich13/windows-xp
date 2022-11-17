@@ -1,10 +1,31 @@
-.notepad {
-    height: 34px;
-    width: 34px;
-    background-image: url('https://98.js.org/images/icons/notepad-32x32.png');
-    margin: 10px;
+.all-icons {
+  display: grid;
+}
+
+.grid-icons {
+  max-width: 80px;
+}
+
+.icon {
+    height: 33px;
+    width: 33px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 2px;
     border: none;
     background-color: #048383;
+}
+
+.icons-name {
+  margin: 0px;
+  font-size: 12px;
+  color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+  text-align: center;
+  background-color: #82b3dd;
+
 }
 
 .react-grid-layout {
