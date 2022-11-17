@@ -27,7 +27,8 @@ const useStyles = makeStyles({
   },
   actionsContainer: {
     display: "flex",
-    paddingTop: 3
+    paddingTop: 1,
+    paddingRight: 5
   },
   settingsWindow: {
     "&:hover": {
@@ -46,7 +47,8 @@ const useStyles = makeStyles({
   },
   closeWindow: {
     "&:hover": {
-      backgroundColor: "red"
+      backgroundColor: "red",
+      border: "solid 2px bleck"
     },
     "&:focus": {
       outline: "none"
@@ -82,9 +84,9 @@ const useStyles = makeStyles({
 });
 
 const initialWidgetsList = [
-  { id: 1, name: "One1" },
-  { id: 2, name: "Two" },
-  { id: 3, name: "Three" }
+  { id: 1, name: "Notepad", content: "app Notepad" },
+  { id: 2, name: "My documents", content: "app My documents" },
+  { id: 3, name: "Folder", content: "app Folder" }
 ];
 
 const initialLayout = [
@@ -146,27 +148,27 @@ function Display() {
 
   const WidgetHeader = (item) => {
     const classes = useStyles();
+    console.log(item.item.name)
     return (
       <>
         <div className={classes.windowHeader}>
           <div className={classes.logoContainer}>
-            <span className={classes.appName}>Widget Name</span>
-            <span className={classes.appName}>(Last Updated)</span>
+            <span className={classes.appName}>{item.item.name}</span>
           </div>
           <div className={classes.actionsContainer}>
-            <button className={classes.settingsWindow} type="button">
+            {/* <button className={classes.settingsWindow} type="button">
               <div className={classes.windowControlsIcon}>
                 <SettingsIcon />
               </div>
-            </button>
+            </button> */}
             <button
               className={classes.closeWindow}
               type="button"
               onClick={() => removeWidget(item.item)}
             >
-              <div className={classes.windowControlsIcon}>
-                <CloseIcon />
-              </div>
+              {/* <div className='windowControlsIcon'> */}
+                <CloseIcon className='windowControlsIcon' />
+              {/* </div> */}
             </button>
           </div>
         </div>
@@ -207,28 +209,26 @@ function Display() {
               />
              <p className='icons-name'>Folder</p>
           </div>
-          
-
-         
         </div>
        
-        
-      
-
       <ResponsiveGridLayout
         layouts={{ lg: layout }}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         measureBeforeMount
         className="layout"
-        isDragable
+        isDraggable
+        isRearrangeable
         isResizable
         margin={[20, 20]}
+        allowOverlap={true}
       >
         {widget.map((item, i) => {
           return (
             <div key={item.id} className="grid-item">
               <WidgetHeader item={item} />
-              {item.name}
+              <h2>{item.name}</h2>
+              <p>{item.content}</p>
+              
             </div>
           );
         })}
