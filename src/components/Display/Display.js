@@ -123,9 +123,7 @@ function Display() {
         
       })
     );
- 
     setWidgetsState({ ...widgetsState, [item.name]: true });
-
   };
 
   const removeWidget = (item) => {
@@ -211,11 +209,9 @@ function Display() {
        
       <ResponsiveGridLayout
         layouts={{ lg: layout }}
-        breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         measureBeforeMount
         className="layout"
         isDraggable
-        isRearrangeable
         isResizable
         margin={[20, 20]}
         allowOverlap={true}
@@ -226,7 +222,6 @@ function Display() {
               <WidgetHeader item={item} />
               <h2>{item.name}</h2>
               <p>{item.content}</p>
-              
             </div>
           );
         })}
