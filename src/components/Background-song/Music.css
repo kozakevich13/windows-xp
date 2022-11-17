@@ -1,8 +1,18 @@
 .volume-icons {
-    background-image: url('https://98.js.org/images/icons/audio-okay-16x16.png');
-    width: 16px;
-    height: 16px;
-    border: none;
+    background-image: url('../../img/audio.png');
+    width: 18px;
+    height: 18px;
+    border: solid 1px #c0c0c0;
     background-color:#c2c3ba;
-    margin: 5px;
+    margin: 2px;
+}
+
+.volume-icons:hover {
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white; 
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
 }

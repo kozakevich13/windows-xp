@@ -4,7 +4,6 @@ import folder from '../../img/folder.png'
 import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
-import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -147,7 +146,6 @@ function Display() {
 
 
   const WidgetHeader = (item) => {
-    const classes = useStyles();
     console.log(item.item.name)
     return (
       <>
@@ -178,7 +176,7 @@ function Display() {
   const classes = useStyles();
 
   return (
-    <>
+    <div className='main-container' >
         <div className='all-icons'>
           <div className='grid-icons'>
             <button
@@ -233,7 +231,7 @@ function Display() {
           );
         })}
       </ResponsiveGridLayout>
-    </>
+    </div>
   );
 }
 

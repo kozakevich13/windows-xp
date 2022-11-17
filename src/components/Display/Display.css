@@ -1,6 +1,10 @@
+.main-container {
+  display: flex;
+}
 .all-icons {
   display: grid;
   max-width: 80px;
+  height: 200px;
 }
 
 .grid-icons {

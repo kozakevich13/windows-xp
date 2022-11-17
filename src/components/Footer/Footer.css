@@ -54,10 +54,24 @@
     border-right: solid 2px white;
 }
 
-.taskbar-icons {
+.taskbar-calendar {
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 2px;
+    width: 17px;
+    height: 17px;
+    border: solid 1px #c0c0c0;
+
+}
+
+.taskbar-calendar:hover {
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white; 
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .taskbar-time {

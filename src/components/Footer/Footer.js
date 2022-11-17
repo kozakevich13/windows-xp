@@ -29,7 +29,7 @@ function getActualtime() {
         </div>
         <div className='icons-menu'>
             <Music/>
-            <img className='taskbar-icons' alt='windows-calendar' src={scheduler}/>
+            <img className='taskbar-calendar' alt='windows-calendar' src={scheduler}/>
             <time className='taskbar-time'>{time}</time> 
         </div>
     </div>
