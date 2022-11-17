@@ -47,6 +47,13 @@
     border-left: solid 2px white;
 }
 
+.btn-start:hover {
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+}
+
 .taskbar-icons {
     margin-left: 5px;
     margin-right: 5px;
