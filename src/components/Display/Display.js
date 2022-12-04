@@ -4,25 +4,28 @@ import folder from '../../img/folder.png'
 import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
-import CloseIcon from "@material-ui/icons/Close";
+// import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
+import Notepad from '../../apps/Notepad';
+import closeIcon from '../../img/close-icon.png'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const useStyles = makeStyles({
   windowHeader: {
-    backgroundColor: "lightblue",
+    backgroundColor: "red",
     display: "flex",
     justifyContent: "space-between",
-    height: 25
+    height: 18,
+    margin: 3
   },
   logoContainer: {
     overflow: "hidden"
   },
   appName: {
-    color: "black",
+    color: "white",
     fontSize: 14,
     marginBottom: 5,
-    paddingLeft: 8
+    // paddingLeft: 8
   },
   actionsContainer: {
     display: "flex",
@@ -54,8 +57,8 @@ const useStyles = makeStyles({
     },
     backgroundColor: "transparent",
     border: "none",
-    width: 20,
-    height: 20,
+    width: 16,
+    height: 16,
     padding: 0,
     margin: 0,
     transition: "background-color 150ms ease"
@@ -83,7 +86,7 @@ const useStyles = makeStyles({
 });
 
 const initialWidgetsList = [
-  { id: 1, name: "Notepad", content: "app Notepad" },
+  { id: 1, name: "Untitled - Notepad", content: <Notepad/> },
   { id: 2, name: "My documents", content: "app My documents" },
   { id: 3, name: "Folder", content: "app Folder" }
 ];
@@ -147,9 +150,9 @@ function Display() {
     console.log(item.item.name)
     return (
       <>
-        <div className={classes.windowHeader}>
+        <div className='windowHeader'>
           <div className={classes.logoContainer}>
-            <span className={classes.appName}>{item.item.name}</span>
+            <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
           <div className={classes.actionsContainer}>
             {/* <button className={classes.settingsWindow} type="button">
@@ -158,13 +161,11 @@ function Display() {
               </div>
             </button> */}
             <button
-              className={classes.closeWindow}
+              className='closeWindow'
               type="button"
               onClick={() => removeWidget(item.item)}
             >
-              {/* <div className='windowControlsIcon'> */}
-                <CloseIcon className='windowControlsIcon' />
-              {/* </div> */}
+              <img className='close-icon' src={closeIcon}></img>
             </button>
           </div>
         </div>
@@ -220,8 +221,8 @@ function Display() {
           return (
             <div key={item.id} className="grid-item">
               <WidgetHeader item={item} />
-              <h2>{item.name}</h2>
-              <p>{item.content}</p>
+              {/* <h2>{item.name}</h2> */}
+              {item.content}
             </div>
           );
         })}
