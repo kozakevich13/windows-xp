@@ -11,16 +11,6 @@ import closeIcon from '../../img/close-icon.png'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const useStyles = makeStyles({
-  windowHeader: {
-    backgroundColor: "red",
-    display: "flex",
-    justifyContent: "space-between",
-    height: 18,
-    margin: 3
-  },
-  logoContainer: {
-    overflow: "hidden"
-  },
   appName: {
     color: "white",
     fontSize: 14,
@@ -151,7 +141,7 @@ function Display() {
     return (
       <>
         <div className='windowHeader'>
-          <div className={classes.logoContainer}>
+          <div className='logoContainer'>
             <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
           <div className={classes.actionsContainer}>
@@ -197,9 +187,6 @@ function Display() {
             <p className='icons-name'>My Documents</p>
           </div>
 
-          <div>
-            test
-          </div>
 
           <div className='grid-icons'>
               <button
