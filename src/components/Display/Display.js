@@ -197,6 +197,10 @@ function Display() {
             <p className='icons-name'>My Documents</p>
           </div>
 
+          <div>
+            test
+          </div>
+
           <div className='grid-icons'>
               <button
                 className='icon'
