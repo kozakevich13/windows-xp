@@ -88,7 +88,7 @@ const initialLayout = [
 ];
 
 
-function Display() {
+function Display({setMessage}) {
   const [widget, setWidget] = useState(initialWidgetsList);
   const [widgetsState, setWidgetsState] = useState({
     One: true,
@@ -101,11 +101,12 @@ function Display() {
 
   console.log(layout)
   console.log(widget)
+  setTimeout(()=>{
+    sessionStorage.setItem('vidgets', JSON.stringify(layout))
+  },5000)
 
 
   const addWidget = (item) => {
-
-   
     setNewCounter(newCounter + 1);
     const addedLayout = initialLayout.find(
       (x) => Number(x.i) === Number(item.id)
@@ -119,13 +120,13 @@ function Display() {
         minH: 4,
         w: addedLayout.w,
         h: addedLayout.h
-        
       })
     );
     setTimeout(()=>{
       setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h }))
     }, 2)
     setWidgetsState({ ...widgetsState, [item.name]: true });
+
   };
 
   const removeWidget = (item) => {
@@ -144,6 +145,9 @@ function Display() {
     setWidget(newWidgets);
   }, [widgetsState]);
 
+  const onButtonClick=(changeValue)=>{
+    setMessage(changeValue)
+    }
 
   const WidgetHeader = (item) => {
     console.log(item.item.name)
@@ -159,6 +163,9 @@ function Display() {
                 <SettingsIcon />
               </div>
             </button> */}
+
+<button onClick={()=>onButtonClick('Message from child 1')}>Child1</button>
+
             <button
               className='closeWindow'
               type="button"

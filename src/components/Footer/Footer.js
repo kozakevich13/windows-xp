@@ -1,12 +1,18 @@
 import './Footer.css';
 import { useState } from 'react';
 import Music from '../Background-song/Music';
-import start from '../../img/start.png'
-import scheduler from '../../img/scheduler.png'
+import start from '../../img/start.png';
+import scheduler from '../../img/scheduler.png';
+import { WidthProvider, Responsive } from "react-grid-layout";
 
-function Footer() {
+const ResponsiveGridLayout = WidthProvider(Responsive);
+
+
+function Footer({selectedMessage}) {
   
 const [time, setTime] = useState('')
+// let taskbar = layout
+// console.log('footer layout' + layout)
 function say() {
     alert('hi')
 }
@@ -26,6 +32,7 @@ function getActualtime() {
         </button>
         <div className="vl"></div>
         <div className='tasks'>
+        <p>{selectedMessage}</p>
         </div>
         <div className='icons-menu'>
             <Music/>

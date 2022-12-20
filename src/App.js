@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 function App() {
 
   const [isLoding, setIsLoding] = useState(true);
+  const [selectedMessage,setMessage]=useState();
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,8 +31,8 @@ function App() {
         />
       ) : (
         <>
-           <Display/>
-           <Footer/>
+           <Display setMessage={setMessage}/>
+           <Footer selectedMessage={selectedMessage}/>
         </>
        
       )}
