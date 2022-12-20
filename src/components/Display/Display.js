@@ -99,7 +99,13 @@ function Display() {
   const [layout, setlayout] = useState([]);
   const [newCounter, setNewCounter] = useState(0);
 
+  console.log(layout)
+  console.log(widget)
+
+
   const addWidget = (item) => {
+
+   
     setNewCounter(newCounter + 1);
     const addedLayout = initialLayout.find(
       (x) => Number(x.i) === Number(item.id)
@@ -108,14 +114,17 @@ function Display() {
       layout.concat({
         i: String(addedLayout.i),
         x: addedLayout.x,
-        minX: addedLayout.x,
+        minW: 4,
         y: addedLayout.y,
-        minY: addedLayout.y,
+        minH: 4,
         w: addedLayout.w,
         h: addedLayout.h
         
       })
     );
+    setTimeout(()=>{
+      setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h }))
+    }, 2)
     setWidgetsState({ ...widgetsState, [item.name]: true });
   };
 
