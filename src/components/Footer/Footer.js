@@ -23,8 +23,6 @@ function getActualtime() {
   let actualMinute = new Date().getMinutes() 
   setTime(`${actualHour}:${actualMinute}`)
 }
-  const listItems = selectedMessage.map((d) => <div className='task-item' key={d.name}>{d.name}</div>);
-
   return (
     <div className='footer'>
         <button  className='btn-start' onClick={()=>{say()}}>
@@ -33,8 +31,7 @@ function getActualtime() {
         </button>
         <div className="vl"></div>
         <div className='tasks'>
-        {/* <div className='task-item'>{selectedMessage}</div> */}
-        {listItems}
+        {selectedMessage?.map((d) => <div className='task-item' key={d.name}>{d.name} </div>)}
         </div>
         <div className='icons-menu'>
             <Music/>
