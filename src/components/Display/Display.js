@@ -89,7 +89,7 @@ const initialLayout = [
 
 
 function Display({setMessage}) {
-  const [widget, setWidget] = useState(initialWidgetsList);
+  const [widget, setWidget] = useState([]);
   const [widgetsState, setWidgetsState] = useState({
     One: true,
     Two: true,
@@ -98,13 +98,10 @@ function Display({setMessage}) {
 
   const [layout, setlayout] = useState([]);
   const [newCounter, setNewCounter] = useState(0);
-
-  console.log(layout)
-  console.log(widget)
-  setTimeout(()=>{
-    sessionStorage.setItem('vidgets', JSON.stringify(layout))
-  },5000)
-
+  
+  useEffect(()=>{
+    onButtonClick(widget)
+  },[widget])
 
   const addWidget = (item) => {
     setNewCounter(newCounter + 1);
@@ -150,7 +147,6 @@ function Display({setMessage}) {
     }
 
   const WidgetHeader = (item) => {
-    console.log(item.item.name)
     return (
       <>
         <div className='windowHeader'>
@@ -164,7 +160,7 @@ function Display({setMessage}) {
               </div>
             </button> */}
 
-<button onClick={()=>onButtonClick('Message from child 1')}>Child1</button>
+            {/* <button onClick={()=>onButtonClick('Message from child 1')}>Child1</button> */}
 
             <button
               className='closeWindow'

@@ -80,5 +80,24 @@
     margin-top: 5px;
 }
 
+.task-item {
+    margin-top: 2px;
+    border: solid 2px;
+    border-top: solid 2px white;
+    border-left: solid 2px white;
+    margin-left: 2px;
+    min-width: 180px;
+}
+
+.task-item:hover {
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;  
+}
+
+.tasks {
+    display: flex;
+}
 
 
