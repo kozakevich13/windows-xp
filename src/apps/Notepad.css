@@ -15,6 +15,7 @@
     margin-top: 2px;
     margin-bottom: 2px;
     border: solid 1px #c0c0c0;
+    font-size: 15px;
 }
 
 .btn-notepad:hover {
@@ -26,7 +27,7 @@
 }
 
 .working-area-notepad {
-    height: calc(104% - 60px);
+    height: calc(105% - 60px);
     display: flex;
 }
 
@@ -53,14 +54,16 @@
 }
 
 .scroll-btn {
+    position: relative;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    cursor: se-resize;
     border: solid 1px;
     border-top: solid 1px white;
     border-left: solid 1px white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-top: 2px;
+    background-image: url('../img/arrow-top.png');
+    background-size: cover;
 }
 
 .scroll-btn:hover {
