@@ -6,22 +6,27 @@ import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 // import CloseIcon from "@material-ui/icons/Close";
 import Notepad from '../../apps/Notepad/Notepad';
+import Word from '../../apps/Word/Word';
 import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
+import word from '../../img/WINWORD_1.ico'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 
 const initialWidgetsList = [
   { id: 1, name: "Untitled - Notepad", content: <Notepad/> },
   { id: 2, name: "My documents", content: "app My documents" },
-  { id: 3, name: "Folder", content: "app Folder" }
+  { id: 3, name: "Folder", content: "app Folder" },
+  { id: 4, name: "Word", content: <Word/> }
+
 ];
 
 const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
-  { i: "3", x: 8, y: 0, w: 4, h: 2 }
+  { i: "3", x: 8, y: 0, w: 4, h: 2 },
+  { i: "4", x: 8, y: 0, w: 4, h: 2 }
 ];
 
 
@@ -81,9 +86,9 @@ function Display({setMessage}) {
 
   const onButtonClick=(changeValue)=>{
     setMessage(changeValue)
-    }
+  }
 
-    function say() {
+  function say() {
       alert('hi')
   }
 
@@ -157,7 +162,19 @@ function Display({setMessage}) {
               />
              <p className='icons-name'>Folder</p>
           </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[3])}
+                style={{ backgroundImage: `url(${word})`,  backgroundSize: 'cover' }}
+              />
+             <p className='icons-name'>Word</p>
+          </div>
         </div>
+
+
        
       <ResponsiveGridLayout
         layouts={{ lg: layout }}

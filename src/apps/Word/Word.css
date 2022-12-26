@@ -1,24 +1,24 @@
-.main-container-notepad {
+.main-container-word {
     /* background-color: aquamarine; */
     height: 94%;
     position: relative;
 
 }
 
-.notepad-header {
+.word-header {
     display: flex;
     margin-bottom: 2px;
 }
 
-.btn-notepad {
+.btn-word {
     margin-left: 5px; 
     margin-top: 2px;
     margin-bottom: 2px;
     border: solid 1px #c0c0c0;
-    font-size: 15px;
+    font-size: 12px;
 }
 
-.btn-notepad:hover {
+.btn-word:hover {
     border-top: solid 1px white;
     border-left: solid 1px white;
     border-bottom: solid 1px black;
@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 
-.working-area-notepad {
+.working-area-word {
     height: calc(105% - 60px);
     display: flex;
 }
@@ -62,7 +62,7 @@
     border: solid 1px;
     border-top: solid 1px white;
     border-left: solid 1px white;
-    background-image: url('../img/arrow-top.png');
+    background-image: url('../../img/arrow-top.png');
     background-size: cover;
 }
 
