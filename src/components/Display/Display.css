@@ -32,12 +32,12 @@
   background-color: #82b3dd;
 }
 
-.close-icon {
+.window-icon {
   width: 10px;
   height: 10px;
 }
 
-.closeWindow {
+.window-btn {
   background-color: #c0c0c0;
   border: solid 1px;
   border-top: solid 1px white;
@@ -47,9 +47,10 @@
   padding: 0;
   margin: 0;
   transition: background-color 150ms ease;
+  margin-left: 2px;
 }
 
-.closeWindow:hover {
+.window-btn:hover {
   border-top: solid 1px black;
   border-left: solid 1px black;
   border-bottom: solid 1px white;
@@ -96,22 +97,37 @@
   
   .react-grid-item > .react-resizable-handle {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     bottom: 0;
     right: 0;
     cursor: se-resize;
+    border: solid 1px;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    background-image: url('../../img/arrow-bottom.png');
+    background-size: cover;
+  }
+
+  .react-grid-item > .react-resizable-handle:hover {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white;
   }
   
   .react-grid-item > .react-resizable-handle::after {
-    content: "";
-    position: absolute;
-    right: 3px;
-    bottom: 3px;
-    width: 5px;
-    height: 5px;
-    border-right: 2px solid rgba(0, 0, 0, 0.4);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    width: 0; 
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid black;
   }
   
   .react-grid-item:not(.react-grid-placeholder) {
