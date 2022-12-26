@@ -1,5 +1,10 @@
 .main-container {
   display: flex;
+  width: 100%;
+}
+
+.layout {
+  width: 100%
 }
 .all-icons {
   display: grid;
@@ -46,7 +51,7 @@
   height: 16px;
   padding: 0;
   margin: 0;
-  transition: background-color 150ms ease;
+  font-family: 'Microsoft Sans Serif', sans-serif;
   margin-left: 2px;
 }
 
