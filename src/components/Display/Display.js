@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 // import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
-import Notepad from '../../apps/Notepad';
+import Notepad from '../../apps/Notepad/Notepad';
 import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
@@ -159,7 +159,9 @@ function Display({setMessage}) {
           <div className='logoContainer'>
             <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
-          <div className={classes.actionsContainer}>
+          {/* <div className={classes.actionsContainer}> */}
+          <div className='btns-block'>
+
             <button
               className='window-btn'
               type="button"
@@ -232,7 +234,7 @@ function Display({setMessage}) {
         isResizable
         margin={[20, 20]}
         allowOverlap={true}
-        draggableCancel=".windowHeader"
+        draggableCancel={[".btns-block",'.working-area-notepad']}
       >
         {widget.map((item, i) => {
           return (
