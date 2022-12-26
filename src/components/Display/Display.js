@@ -5,77 +5,12 @@ import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 // import CloseIcon from "@material-ui/icons/Close";
-import { makeStyles } from "@material-ui/core/styles";
 import Notepad from '../../apps/Notepad/Notepad';
 import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-const useStyles = makeStyles({
-  appName: {
-    color: "white",
-    fontSize: 14,
-    marginBottom: 5,
-    // paddingLeft: 8
-  },
-  actionsContainer: {
-    display: "flex",
-    paddingTop: 1,
-    paddingRight: 5
-  },
-  settingsWindow: {
-    "&:hover": {
-      backgroundColor: "orange"
-    },
-    "&:focus": {
-      outline: "none"
-    },
-    backgroundColor: "transparent",
-    border: "none",
-    width: 20,
-    height: 20,
-    padding: 0,
-    margin: 0,
-    transition: "background-color 150ms ease"
-  },
-  closeWindow: {
-    "&:hover": {
-      backgroundColor: "red",
-      border: "solid 2px bleck"
-    },
-    "&:focus": {
-      outline: "none"
-    },
-    backgroundColor: "transparent",
-    border: "none",
-    width: 16,
-    height: 16,
-    padding: 0,
-    margin: 0,
-    transition: "background-color 150ms ease"
-  },
-  windowControlsIcon: {
-    pointerEvents: "none",
-    userSelect: "none",
-    width: 20,
-    height: 20,
-    transition: "fill 150ms ease"
-  },
-  addButton: {
-    height: "60px",
-    width: "10%",
-    minWidth: 120,
-    padding: "1.5em auto",
-    margin: "1em auto",
-    textTransform: "uppercase",
-    letterSpacing: "0.5em",
-    fontSize: "12px"
-  },
-  gridItem: {
-    cursor: "grab"
-  }
-});
 
 const initialWidgetsList = [
   { id: 1, name: "Untitled - Notepad", content: <Notepad/> },
@@ -157,10 +92,9 @@ function Display({setMessage}) {
       <>
         <div className='windowHeader'>
           <div className='logoContainer'>
-            <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
+            <span className='appName'><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
-          {/* <div className={classes.actionsContainer}> */}
-          <div className='btns-block'>
+          <div className='actionsContainer'>
 
             <button
               className='window-btn'
@@ -189,7 +123,6 @@ function Display({setMessage}) {
       </>
     );
   };
-  const classes = useStyles();
 
   return (
     <div className='main-container' >
@@ -234,7 +167,7 @@ function Display({setMessage}) {
         isResizable
         margin={[20, 20]}
         allowOverlap={true}
-        draggableCancel={[".btns-block",'.working-area-notepad']}
+        draggableCancel={[".actionsContainer",'.working-area-notepad']}
       >
         {widget.map((item, i) => {
           return (
