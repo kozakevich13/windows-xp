@@ -148,6 +148,10 @@ function Display({setMessage}) {
     setMessage(changeValue)
     }
 
+    function say() {
+      alert('hi')
+  }
+
   const WidgetHeader = (item) => {
     return (
       <>
@@ -164,8 +168,9 @@ function Display({setMessage}) {
             </button>
 
             <button
-            className='window-btn'
+              className='window-btn'
               type="button"
+              onClick={()=>{say()}}
             >
               <img alt='window-icon' className='window-icon' src={fullscreen}></img>
             </button>
@@ -227,6 +232,7 @@ function Display({setMessage}) {
         isResizable
         margin={[20, 20]}
         allowOverlap={true}
+        draggableCancel=".windowHeader"
       >
         {widget.map((item, i) => {
           return (
