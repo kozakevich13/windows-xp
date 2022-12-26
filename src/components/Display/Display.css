@@ -32,12 +32,12 @@
   background-color: #82b3dd;
 }
 
-.close-icon {
+.window-icon {
   width: 10px;
   height: 10px;
 }
 
-.closeWindow {
+.window-btn {
   background-color: #c0c0c0;
   border: solid 1px;
   border-top: solid 1px white;
@@ -47,9 +47,10 @@
   padding: 0;
   margin: 0;
   transition: background-color 150ms ease;
+  margin-left: 2px;
 }
 
-.closeWindow:hover {
+.window-btn:hover {
   border-top: solid 1px black;
   border-left: solid 1px black;
   border-bottom: solid 1px white;

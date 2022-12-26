@@ -8,6 +8,8 @@ import { WidthProvider, Responsive } from "react-grid-layout";
 import { makeStyles } from "@material-ui/core/styles";
 import Notepad from '../../apps/Notepad';
 import closeIcon from '../../img/close-icon.png'
+import hidewindow from '../../img/hidewindow.png'
+import fullscreen from '../../img/fullscreen.png'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const useStyles = makeStyles({
@@ -154,20 +156,26 @@ function Display({setMessage}) {
             <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
           <div className={classes.actionsContainer}>
-            {/* <button className={classes.settingsWindow} type="button">
-              <div className={classes.windowControlsIcon}>
-                <SettingsIcon />
-              </div>
-            </button> */}
-
-            {/* <button onClick={()=>onButtonClick('Message from child 1')}>Child1</button> */}
+            <button
+              className='window-btn'
+              type="button"
+            >
+              <img alt='window-icon' className='window-icon' src={hidewindow}></img>
+            </button>
 
             <button
-              className='closeWindow'
+            className='window-btn'
+              type="button"
+            >
+              <img alt='window-icon' className='window-icon' src={fullscreen}></img>
+            </button>
+
+            <button
+              className='window-btn'
               type="button"
               onClick={() => removeWidget(item.item)}
             >
-              <img className='close-icon' src={closeIcon}></img>
+              <img alt='window-icon' className='window-icon' src={closeIcon}></img>
             </button>
           </div>
         </div>
