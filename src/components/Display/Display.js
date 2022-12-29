@@ -5,88 +5,28 @@ import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 // import CloseIcon from "@material-ui/icons/Close";
-import { makeStyles } from "@material-ui/core/styles";
-import Notepad from '../../apps/Notepad';
+import Notepad from '../../apps/Notepad/Notepad';
+import Word from '../../apps/Word/Word';
 import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
+import word from '../../img/WINWORD_1.ico'
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-const useStyles = makeStyles({
-  appName: {
-    color: "white",
-    fontSize: 14,
-    marginBottom: 5,
-    // paddingLeft: 8
-  },
-  actionsContainer: {
-    display: "flex",
-    paddingTop: 1,
-    paddingRight: 5
-  },
-  settingsWindow: {
-    "&:hover": {
-      backgroundColor: "orange"
-    },
-    "&:focus": {
-      outline: "none"
-    },
-    backgroundColor: "transparent",
-    border: "none",
-    width: 20,
-    height: 20,
-    padding: 0,
-    margin: 0,
-    transition: "background-color 150ms ease"
-  },
-  closeWindow: {
-    "&:hover": {
-      backgroundColor: "red",
-      border: "solid 2px bleck"
-    },
-    "&:focus": {
-      outline: "none"
-    },
-    backgroundColor: "transparent",
-    border: "none",
-    width: 16,
-    height: 16,
-    padding: 0,
-    margin: 0,
-    transition: "background-color 150ms ease"
-  },
-  windowControlsIcon: {
-    pointerEvents: "none",
-    userSelect: "none",
-    width: 20,
-    height: 20,
-    transition: "fill 150ms ease"
-  },
-  addButton: {
-    height: "60px",
-    width: "10%",
-    minWidth: 120,
-    padding: "1.5em auto",
-    margin: "1em auto",
-    textTransform: "uppercase",
-    letterSpacing: "0.5em",
-    fontSize: "12px"
-  },
-  gridItem: {
-    cursor: "grab"
-  }
-});
 
 const initialWidgetsList = [
   { id: 1, name: "Untitled - Notepad", content: <Notepad/> },
   { id: 2, name: "My documents", content: "app My documents" },
-  { id: 3, name: "Folder", content: "app Folder" }
+  { id: 3, name: "Folder", content: "app Folder" },
+  { id: 4, name: "Word", content: <Word/> }
+
 ];
 
 const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
-  { i: "3", x: 8, y: 0, w: 4, h: 2 }
+  { i: "3", x: 8, y: 0, w: 4, h: 2 },
+  { i: "4", x: 8, y: 0, w: 4, h: 2 }
 ];
 
 
@@ -146,9 +86,9 @@ function Display({setMessage}) {
 
   const onButtonClick=(changeValue)=>{
     setMessage(changeValue)
-    }
+  }
 
-    function say() {
+  function say() {
       alert('hi')
   }
 
@@ -157,9 +97,10 @@ function Display({setMessage}) {
       <>
         <div className='windowHeader'>
           <div className='logoContainer'>
-            <span className={classes.appName}><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
+            <span className='appName'><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
           </div>
-          <div className={classes.actionsContainer}>
+          <div className='actionsContainer'>
+
             <button
               className='window-btn'
               type="button"
@@ -187,7 +128,6 @@ function Display({setMessage}) {
       </>
     );
   };
-  const classes = useStyles();
 
   return (
     <div className='main-container' >
@@ -222,7 +162,19 @@ function Display({setMessage}) {
               />
              <p className='icons-name'>Folder</p>
           </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[3])}
+                style={{ backgroundImage: `url(${word})`,  backgroundSize: 'cover' }}
+              />
+             <p className='icons-name'>Word</p>
+          </div>
         </div>
+
+
        
       <ResponsiveGridLayout
         layouts={{ lg: layout }}
@@ -232,7 +184,7 @@ function Display({setMessage}) {
         isResizable
         margin={[20, 20]}
         allowOverlap={true}
-        draggableCancel=".windowHeader"
+        draggableCancel={[".actionsContainer",'.working-area-notepad']}
       >
         {widget.map((item, i) => {
           return (
