@@ -5,9 +5,64 @@
 
 }
 
+.toolbar {
+    display: flex;
+}
+
+.toolbar-block-left {
+    display: flex;
+    border: solid 1px white;
+    border-bottom: solid 1px #ababab;
+    width: 50%;
+    height: 20px;
+    margin-left: 2px;
+}
+
+.toolbar-block-right {
+    display: flex;
+    margin-left: 10px;
+    border: solid 1px white;
+    border-bottom: solid 1px #ababab;
+}
+
+.default-paragraph-font {
+    max-width: 100px;
+}
+
+.fontName {
+    max-width: 150px;
+}
+
+
+
+.toolbar-item {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.vl-toolbar {
+    border-left: 1px solid #ababab;
+    height: 80%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+.vl-toolbar-white {
+    border-left: 1px solid white;
+    height: 80%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 .word-header {
     display: flex;
-    margin-bottom: 2px;
+    /* margin-bottom: px; */
+    border: solid 1px white;
+    border-bottom: solid 1px #ababab;
+    margin-left: 2px;
 }
 
 .btn-word {
