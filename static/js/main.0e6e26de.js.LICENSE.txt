@@ -61,14 +61,6 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
- * A better abstraction over CSS.
- *
- * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
- * @website https://github.com/cssinjs/jss
- * @license MIT
- */
-
 /** @license
  *
  * SoundManager 2: JavaScript Sound for the Web
