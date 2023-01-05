@@ -26,7 +26,7 @@ const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
   { i: "3", x: 8, y: 0, w: 4, h: 2 },
-  { i: "4", x: 8, y: 0, w: 4, h: 2 }
+  { i: "4", x: 2, y: 0, w: 5, h: 2, minW: 9 }
 ];
 
 
@@ -62,7 +62,7 @@ function Display({setMessage}) {
       })
     );
     setTimeout(()=>{
-      setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h }))
+      setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h, minW: 5 }))
     }, 2)
     setWidgetsState({ ...widgetsState, [item.name]: true });
 
