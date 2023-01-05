@@ -15,7 +15,7 @@
     margin-top: 2px;
     margin-bottom: 2px;
     border: solid 1px #c0c0c0;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .btn-notepad:hover {
@@ -31,10 +31,11 @@
     display: flex;
 }
 
-.text-area {
+.text-area-notepad {
     margin-top: 2px;
     width: 98%;
     height: 100%;
+    margin-left: 2px;
 }
 
 .arrow-btn-top {

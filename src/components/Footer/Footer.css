@@ -81,12 +81,22 @@
 }
 
 .task-item {
+    display: flex;
     margin-top: 2px;
     border: solid 2px;
     border-top: solid 2px white;
     border-left: solid 2px white;
     margin-left: 2px;
     min-width: 180px;
+}
+
+.toolbar-icon {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .task-item:hover {

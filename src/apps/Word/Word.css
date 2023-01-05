@@ -5,11 +5,15 @@
 
 }
 
-.toolbar {
+.toolbar-top {
     display: flex;
 }
 
-.toolbar-block-left {
+.toolbar-bottom {
+    display: flex;
+}
+
+.toolbar-top-block-left {
     display: flex;
     border: solid 1px white;
     border-bottom: solid 1px #ababab;
@@ -18,7 +22,16 @@
     margin-left: 2px;
 }
 
-.toolbar-block-right {
+.toolbar-bottom-block-left {
+    display: flex;
+    border: solid 1px white;
+    border-bottom: solid 1px #ababab;
+    width: 50%;
+    height: 20px;
+    margin-left: 2px;
+}
+
+.toolbar-top-block-right {
     display: flex;
     margin-left: 10px;
     border: solid 1px white;
@@ -36,8 +49,21 @@
 
 
 .toolbar-item {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
+    border:  solid 1px #c0c0c0;
+    background-size: cover;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.toolbar-item:hover {
+    width: 15px;
+    height: 15px;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
     background-size: cover;
     margin-left: 5px;
     margin-top: 2px;
@@ -82,14 +108,15 @@
 }
 
 .working-area-word {
-    height: calc(105% - 60px);
+    height: calc(105% - 100px);
     display: flex;
 }
 
-.text-area {
+.text-area-word {
     margin-top: 2px;
     width: 98%;
     height: 100%;
+    margin-left: 2px;
 }
 
 .arrow-btn-top {
