@@ -24,21 +24,6 @@ import i_indent from '../../img/word/indent.bmp'
 import i_highlight from '../../img/word/highlight.bmp'
 import i_fontcolor from '../../img/word/fontcolor.bmp'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Word() {
   
   return (

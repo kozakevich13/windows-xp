@@ -4,7 +4,6 @@ import folder from '../../img/folder.png'
 import myDocumentFolder from '../../img/my-documents-folder.png'
 import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
-// import CloseIcon from "@material-ui/icons/Close";
 import Notepad from '../../apps/Notepad/Notepad';
 import Word from '../../apps/Word/Word';
 import closeIcon from '../../img/close-icon.png'
@@ -15,10 +14,10 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 
 const initialWidgetsList = [
-  { id: 1, name: "Untitled - Notepad", content: <Notepad/> },
-  { id: 2, name: "My documents", content: "app My documents" },
-  { id: 3, name: "Folder", content: "app Folder" },
-  { id: 4, name: "Word", content: <Word/> }
+  { id: 1, name: "Untitled - Notepad", img: "https://rahul.io/images/win98_icons/notepad.ico", content: <Notepad/> },
+  { id: 2, name: "My documents", img: "https://98.js.org/images/icons/my-documents-folder-32x32.png", content: "app My documents" },
+  { id: 3, name: "Folder", img: "	https://98.js.org/images/icons/folder-32x32.png", content: "app Folder" },
+  { id: 4, name: "Word", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Word/> }
 
 ];
 
@@ -97,7 +96,8 @@ function Display({setMessage}) {
       <>
         <div className='windowHeader'>
           <div className='logoContainer'>
-            <span className='appName'><img className='icon-titel' alt='icon' src={notepad}></img>{item.item.name}</span>
+             <img className='icon-titel' alt='icon' src={item.item.img}></img>
+            <span className='appName'>{item.item.name}</span>
           </div>
           <div className='actionsContainer'>
 
