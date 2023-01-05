@@ -20,7 +20,7 @@ function Notepad() {
         </div>
       </div>
       <div className='working-area-notepad'>
-        <textarea className='text-area'>How Strong Are Cats? </textarea>
+        <textarea className='text-area-notepad'>How Strong Are Cats? </textarea>
         <div className='scroll'>
           <div className='scroll-btn'>
           </div>

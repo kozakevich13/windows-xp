@@ -11,6 +11,25 @@ import i_paste from '../../img/word/paste.bmp'
 import i_style from '../../img/word/style.bmp'
 import i_undo from '../../img/word/undo.bmp'
 import i_redo from '../../img/word/redo.bmp'
+import i_bold from '../../img/word/bold.bmp'
+import i_italic from '../../img/word/italic.bmp'
+import i_underline from '../../img/word/underline.bmp'
+import i_left from '../../img/word/left.bmp'
+import i_center from '../../img/word/center.bmp'
+import i_right from '../../img/word/right.bmp'
+import i_number from '../../img/word/number.bmp'
+import i_bullet from '../../img/word/bullet.bmp'
+import i_outdent from '../../img/word/inc-indent.bmp'
+import i_indent from '../../img/word/indent.bmp'
+import i_highlight from '../../img/word/highlight.bmp'
+import i_fontcolor from '../../img/word/fontcolor.bmp'
+
+
+
+
+
+
+
 
 
 
@@ -35,8 +54,8 @@ function Word() {
         <div className='btn-word'>Window</div>
         <div className='btn-word'>Help</div>
       </div>
-      <div className='toolbar'>
-        <div className='toolbar-block-left'>
+      <div className='toolbar-top'>
+        <div className='toolbar-top-block-left'>
           <div  style={{ backgroundImage: `url(${i_new})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_open})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_save})` }} className='toolbar-item'></div>
@@ -56,13 +75,13 @@ function Word() {
           <div  style={{ backgroundImage: `url(${i_undo})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_redo})` }} className='toolbar-item'></div>
         </div>
-        <div className='toolbar-block-right'>
+        <div className='toolbar-top-block-right'>
         <select className='default-paragraph-font'> 
           <option>Heading 1</option>
           <option>Heading 2</option>
           <option>Heading 3</option>
           <option>Normal</option>
-          <option>Default Paragraph Font</option>
+          <option selected>Default Paragraph Font</option>
         </select>
         <select className='fontName'>
           <option>Arial</option>
@@ -70,20 +89,55 @@ function Word() {
           <option>Times New Roman</option>
           <option>Arial Black</option>
           <option>Comic Sans MS</option>
-
         </select>
         <select>
-          <option>Пункт 1</option>
-          <option>Пункт 2</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option selected>12</option>
+          <option>14</option>
+          <option>16</option>
+          <option>18</option>
+          <option>20</option>
+          <option>22</option>
+          <option>24</option>
+          <option>26</option>
+          <option>28</option>
+          <option>30</option>
+          <option>32</option>
+          <option>34</option>
+          <option>36</option>
+          <option>48</option>
+          <option>72</option>
         </select>
         </div>
-  
+      </div>
+      <div className='toolbar-bottom'>
+        <div className='toolbar-bottom-block-left'>
+          <div  style={{ backgroundImage: `url(${i_bold})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_italic})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_underline})` }} className='toolbar-item'></div>
+          <div class="vl-toolbar"></div>
+          <div class="vl-toolbar-white"></div>
+          <div  style={{ backgroundImage: `url(${i_left})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_center})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_right})` }} className='toolbar-item'></div>
+          <div class="vl-toolbar"></div>
+          <div class="vl-toolbar-white"></div>
+          <div  style={{ backgroundImage: `url(${i_number})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_bullet})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_indent})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_outdent})` }} className='toolbar-item'></div>
+          <div class="vl-toolbar"></div>
+          <div class="vl-toolbar-white"></div>
+          <div  style={{ backgroundImage: `url(${i_highlight})` }} className='toolbar-item'></div>
+          <div  style={{ backgroundImage: `url(${i_fontcolor})` }} className='toolbar-item'></div>
 
-
-
+        </div>
       </div>
       <div className='working-area-word'>
-        <textarea className='text-area'>its word</textarea>
+        <textarea className='text-area-word'>its word</textarea>
         <div className='scroll'>
           <div className='scroll-btn'>
           </div>
