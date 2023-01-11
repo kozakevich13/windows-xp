@@ -44,19 +44,19 @@ function Word() {
           <div  style={{ backgroundImage: `url(${i_new})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_open})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_save})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_print})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_preview})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_spellcheck})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_cut})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_copy})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_paste})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_style})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_undo})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_redo})` }} className='toolbar-item'></div>
         </div>
@@ -103,19 +103,19 @@ function Word() {
           <div  style={{ backgroundImage: `url(${i_bold})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_italic})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_underline})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_left})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_center})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_right})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_number})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_bullet})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_indent})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_outdent})` }} className='toolbar-item'></div>
-          <div class="vl-toolbar"></div>
-          <div class="vl-toolbar-white"></div>
+          <div className="vl-toolbar"></div>
+          <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_highlight})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_fontcolor})` }} className='toolbar-item'></div>
 
