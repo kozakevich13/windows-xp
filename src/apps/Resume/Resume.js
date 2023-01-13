@@ -129,8 +129,7 @@ function Resume() {
         <div className='text-area-word'>
           <iframe
             src="https://drive.google.com/file/d/1k7tycyZXUNuDQtP2Vnn5WFncFcr3yPHM/preview"
-            width="500"
-            height="575"
+            className='test'
           >
           </iframe>
         </div>
