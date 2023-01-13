@@ -6,18 +6,20 @@ import React, { useState, useEffect } from "react";
 import { WidthProvider, Responsive } from "react-grid-layout";
 import Notepad from '../../apps/Notepad/Notepad';
 import Word from '../../apps/Word/Word';
+import Resume from '../../apps/Resume/Resume';
 import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
 import word from '../../img/WINWORD_1.ico'
-const ResponsiveGridLayout = WidthProvider(Responsive);
 
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const initialWidgetsList = [
   { id: 1, name: "Untitled - Notepad", img: "https://rahul.io/images/win98_icons/notepad.ico", content: <Notepad/> },
   { id: 2, name: "My documents", img: "https://98.js.org/images/icons/my-documents-folder-32x32.png", content: "app My documents" },
   { id: 3, name: "Folder", img: "	https://98.js.org/images/icons/folder-32x32.png", content: "app Folder" },
-  { id: 4, name: "Word", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Word/> }
+  { id: 4, name: "Word", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Word/> },
+  { id: 5, name: "Word - Resume", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Resume/> }
 
 ];
 
@@ -25,7 +27,9 @@ const initialLayout = [
   { i: "1", x: 0, y: 0, w: 5, h: 2 },
   { i: "2", x: 5, y: 0, w: 3, h: 2 },
   { i: "3", x: 8, y: 0, w: 4, h: 2 },
-  { i: "4", x: 2, y: 0, w: 5, h: 2, minW: 9 }
+  { i: "4", x: 2, y: 0, w: 5, h: 2, minW: 9 },
+  { i: "5", x: 6, y: 0, w: 5, h: 4, minW: 9, minH: 6 }
+
 ];
 
 
@@ -61,7 +65,7 @@ function Display({setMessage}) {
       })
     );
     setTimeout(()=>{
-      setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h, minW: 5 }))
+      setlayout(layout.concat({ i: String(addedLayout.i), x: addedLayout.x, y: addedLayout.y, w: addedLayout.w, h: addedLayout.h, minW: 5, minH: 5 }))
     }, 2)
     setWidgetsState({ ...widgetsState, [item.name]: true });
 
@@ -172,6 +176,16 @@ function Display({setMessage}) {
               />
              <p className='icons-name'>Word</p>
           </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[4])}
+                style={{ backgroundImage: `url(${word})`,  backgroundSize: 'cover' }}
+              />
+             <p className='icons-name'>Resume</p>
+          </div>
         </div>
 
 
@@ -196,6 +210,8 @@ function Display({setMessage}) {
           );
         })}
       </ResponsiveGridLayout>
+
+      
     </div>
   );
 }
