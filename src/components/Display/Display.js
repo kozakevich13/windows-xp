@@ -11,6 +11,8 @@ import closeIcon from '../../img/close-icon.png'
 import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
 import word from '../../img/WINWORD_1.ico'
+import word_resume from '../../img/WINWORD_2.ico'
+
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -19,7 +21,7 @@ const initialWidgetsList = [
   { id: 2, name: "My documents", img: "https://98.js.org/images/icons/my-documents-folder-32x32.png", content: "app My documents" },
   { id: 3, name: "Folder", img: "	https://98.js.org/images/icons/folder-32x32.png", content: "app Folder" },
   { id: 4, name: "Word", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Word/> },
-  { id: 5, name: "Word - Resume", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Resume/> }
+  { id: 5, name: "Word - Resume", img: "https://rahul.io/images/win98_icons/WINWORD_2.ico", content: <Resume/> }
 
 ];
 
@@ -182,7 +184,7 @@ function Display({setMessage}) {
                 className='icon'
                 type="button"
                 onClick={() => addWidget(initialWidgetsList[4])}
-                style={{ backgroundImage: `url(${word})`,  backgroundSize: 'cover' }}
+                style={{ backgroundImage: `url(${word_resume})`,  backgroundSize: 'cover' }}
               />
              <p className='icons-name'>Resume</p>
           </div>
