@@ -12,6 +12,7 @@ import hidewindow from '../../img/hidewindow.png'
 import fullscreen from '../../img/fullscreen.png'
 import word from '../../img/WINWORD_1.ico'
 import word_resume from '../../img/WINWORD_2.ico'
+import Instagram from '../../apps/Instagram/Instagram';
 
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -21,7 +22,8 @@ const initialWidgetsList = [
   { id: 2, name: "My documents", img: "https://98.js.org/images/icons/my-documents-folder-32x32.png", content: "app My documents" },
   { id: 3, name: "Folder", img: "	https://98.js.org/images/icons/folder-32x32.png", content: "app Folder" },
   { id: 4, name: "Word", img: "https://rahul.io/images/win98_icons/WINWORD_1.ico", content: <Word/> },
-  { id: 5, name: "Word - Resume", img: "https://rahul.io/images/win98_icons/WINWORD_2.ico", content: <Resume/> }
+  { id: 5, name: "Word - Resume", img: "https://rahul.io/images/win98_icons/WINWORD_2.ico", content: <Resume/> },
+  { id: 6, name: "Instagram", img: "https://rahul.io/images/win98_icons/WINWORD_2.ico", content: <Instagram/> }
 
 ];
 
@@ -30,7 +32,8 @@ const initialLayout = [
   { i: "2", x: 5, y: 0, w: 5, h: 2 },
   { i: "3", x: 8, y: 0, w: 5, h: 2 },
   { i: "4", x: 2, y: 0, w: 5, h: 2 },
-  { i: "5", x: 6, y: 0, w: 5, h: 4 }
+  { i: "5", x: 6, y: 0, w: 5, h: 4 },
+  { i: "6", x: 4, y: 0, w: 5, h: 4 }
 
 ];
 
@@ -187,6 +190,16 @@ function Display({setMessage}) {
                 style={{ backgroundImage: `url(${word_resume})`,  backgroundSize: 'cover' }}
               />
              <p className='icons-name'>Resume</p>
+          </div>
+
+          <div className='grid-icons'>
+              <button
+                className='icon'
+                type="button"
+                onClick={() => addWidget(initialWidgetsList[5])}
+                style={{ backgroundImage: `url(${word_resume})`,  backgroundSize: 'cover' }}
+              />
+             <p className='icons-name'>Instagram</p>
           </div>
         </div>
 
