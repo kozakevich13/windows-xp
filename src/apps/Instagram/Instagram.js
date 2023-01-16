@@ -11,16 +11,16 @@ function Instagram() {
   let token = 'IGQVJVcGpzV01OZAi1jd0tKMzNZAVU5GN19JdW93NXBZANncwQ3IydlpRRldsQWt3RWgwS01WTG9RcWNvNk81eVdBZAEREbkVMVFNSWVMzclZAFbEZASNlhhZAFlLVjhsZAkRYOWtDT0hRYnlPRzdRUXZAPRUZAkcwZDZD'
 
   
-  useEffect(() => {
-    fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${token}`, { method: 'no-cors', headers: {
-      'Access-Control-Allow-Origin': '*',
-    },})
+  // useEffect(() => {
+  //   fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${token}`, { method: 'no-cors', headers: {
+  //     'Access-Control-Allow-Origin': '*',
+  //   },})
     
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-      });
-  }, []);
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data)
+  //     });
+  // }, []);
 
  
  
