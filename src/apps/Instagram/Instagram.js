@@ -1,51 +1,71 @@
 import { async } from 'q';
 import { useState, useEffect } from 'react';
 import './Instagram.css';
+import user_avatar from '../../img/user_avatar.jpg'
 
 
 
 function Instagram() {
 
-  const [data1, setData] = useState()
+  const [feed, setFeed] = useState()
 
-  let token = 'IGQVJVcGpzV01OZAi1jd0tKMzNZAVU5GN19JdW93NXBZANncwQ3IydlpRRldsQWt3RWgwS01WTG9RcWNvNk81eVdBZAEREbkVMVFNSWVMzclZAFbEZASNlhhZAFlLVjhsZAkRYOWtDT0hRYnlPRzdRUXZAPRUZAkcwZDZD'
-
-  
-  // useEffect(() => {
-  //   fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${token}`, { method: 'no-cors', headers: {
-  //     'Access-Control-Allow-Origin': '*',
-  //   },})
+  useEffect(() => {
+    fetch(`https://v1.nocodeapi.com/betlin/instagram/gkseMhdAxftspXdz`)
     
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data)
-  //     });
-  // }, []);
+      .then(response => response.json())
+      .then(data => {
+        setFeed(data)
+      });
+  }, []);
+
+  console.log(feed)
 
  
- 
-
-// const dsfsd = async () => {
-//   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${token}`
-//   const data = await fetch(url)
-//   const feed = data.json()
-//   setData(feed)
-
-// }
-
-console.log(data1)
-
 
   
 
   
   return (
-    <div className='main-container-notepad'>
-      <div className='notepad-header'>
-        <div>inst</div>
-        <button >get</button>
-       
+    <div className='main-container-app'>
+      <div className='main-container-inst'>
+        
+        <div className='header-conteinet-inst'>
+          <p className='user-name'>vitaliy_kozakevich</p>
+        </div>
+        
+        <div className='page-info-inst'>
+          <div className='top-info-block'>
+            <div className='user-box'>
+                <img className='user-avatar' src={user_avatar}></img>
+            </div>
+            <div className='details-user'>
+                <div className='user-statistic'>
+                    <div className='user-number-photos user-box-numbers'>
+                      <p className='numbers-stats'>6</p>
+                      <p className='stat-title'>photos</p>
+                    </div>
+                    <div className='user-number-followers user-box-numbers'>
+                      <p className='numbers-stats'>1m</p>
+                      <p className='stat-title'>followers</p>
+                    </div>
+                    <div className='user-number-following user-box-numbers'>
+                      <p className='numbers-stats'>0</p>
+                      <p className='stat-title'>following</p>
+                    </div>
+                </div>
+                <div className='block-following'>
+                  <button className='btn-following'>following</button>
+                </div>
+            </div>
+        
+           
+          </div>
+
+        </div>
       </div>
+      
+     
+    
     </div>
   );
 }
