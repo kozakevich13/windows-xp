@@ -44,7 +44,7 @@ function Instagram() {
                       <p className='numbers-stats'>6</p>
                       <p className='stat-title'>photos</p>
                     </div>
-                    <div className='user-number-followers user-box-numbers'>
+                    <div className='user-number-followers user-box-numbers-followers'>
                       <p className='numbers-stats'>1m</p>
                       <p className='stat-title'>followers</p>
                     </div>
@@ -57,9 +57,11 @@ function Instagram() {
                   <button className='btn-following'>following</button>
                 </div>
             </div>
-        
-           
           </div>
+
+          <div className='more-user-info'>
+             more-user-info
+            </div>
 
         </div>
       </div>
