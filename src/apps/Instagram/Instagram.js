@@ -30,7 +30,7 @@ function Instagram() {
       <div className='main-container-inst'>
         
         <div className='header-conteinet-inst'>
-          <p className='user-name'>vitaliy_kozakevich</p>
+          <p className='user-login'>vitaliy_kozakevich</p>
         </div>
         
         <div className='page-info-inst'>
@@ -54,14 +54,16 @@ function Instagram() {
                     </div>
                 </div>
                 <div className='block-following'>
-                  <button className='btn-following'>following</button>
+                  <a href="https://www.instagram.com/vitaliy_kozakevich/" className='btn-following'>Following</a>
                 </div>
             </div>
           </div>
 
           <div className='more-user-info'>
-             more-user-info
-            </div>
+            <h4 className='user-name'>Vitaliy Kozakevich</h4>
+            <p className='user-description'>🐱‍👤I’m a web developer. 🐱‍🏍I spend my whole day, practically every day, experimenting with HTML, CSS, and JavaScript. 🐱‍💻</p>
+            <a  className='user-link' href='https://www.linkedin.com/in/vitaliy-kozakevich-492623237/'>Linkedin.com</a>
+          </div>
 
         </div>
       </div>
