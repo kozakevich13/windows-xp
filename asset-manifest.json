@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/windows-xp/static/css/main.4a8d8678.css",
-    "main.js": "/windows-xp/static/js/main.dbf9e981.js",
+    "main.css": "/windows-xp/static/css/main.fd304a8f.css",
+    "main.js": "/windows-xp/static/js/main.79d74ffa.js",
     "static/js/787.04b25fa3.chunk.js": "/windows-xp/static/js/787.04b25fa3.chunk.js",
     "static/media/sound.wav": "/windows-xp/static/media/sound.b57d8cd3980dcc53f97e.wav",
     "static/media/loading-windows98.gif": "/windows-xp/static/media/loading-windows98.63dee95c4d7500544ecc.gif",
+    "static/media/user_avatar.jpg": "/windows-xp/static/media/user_avatar.44ab93d4c6a09533929b.jpg",
     "static/media/WINWORD_1.ico": "/windows-xp/static/media/WINWORD_1.7988ae7c7e64843818f3.ico",
+    "static/media/WINWORD_2.ico": "/windows-xp/static/media/WINWORD_2.9b7491e8e2433fd17de2.ico",
     "index.html": "/windows-xp/index.html",
-    "main.4a8d8678.css.map": "/windows-xp/static/css/main.4a8d8678.css.map",
-    "main.dbf9e981.js.map": "/windows-xp/static/js/main.dbf9e981.js.map",
+    "main.fd304a8f.css.map": "/windows-xp/static/css/main.fd304a8f.css.map",
+    "main.79d74ffa.js.map": "/windows-xp/static/js/main.79d74ffa.js.map",
     "787.04b25fa3.chunk.js.map": "/windows-xp/static/js/787.04b25fa3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a8d8678.css",
-    "static/js/main.dbf9e981.js"
+    "static/css/main.fd304a8f.css",
+    "static/js/main.79d74ffa.js"
   ]
 }
