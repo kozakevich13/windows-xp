@@ -1,0 +1,126 @@
+
+
+.header-conteinet-inst {
+    background-color: #436e90;
+    text-align: center;
+    height: 50px;
+    margin: 2px;
+}
+
+.user-login {
+    padding-top: 15px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.user-name {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.user-description {
+    margin: 8px;
+}
+.user-link {
+    margin: 8px;
+    margin-top: 5px;
+    display: inline-block;
+    color: rgba(120,138,151,255);
+}
+.top-info-block {
+    display: flex;
+    width: 100%;
+}
+
+.user-box {
+    padding: 2px;
+    border-radius: 5px;
+    
+}
+
+.user-box-numbers {
+    min-width: 109px;
+    border-radius: 0px;
+    border: solid 2px #b5b5b6;
+    border-top: 0px;
+    height: 50px;
+}
+
+.user-number-following {
+    border-right: 0px;
+}
+
+.user-box-numbers-followers {
+    min-width: 109px;
+    border-radius: 0px;
+    border: solid 2px #b5b5b6;
+    border-top: 0px;
+    border-left: 0px ;
+    border-right: 0px;
+    height: 50px;
+}
+
+.user-avatar {
+    width: 90px;
+    height: 90px;
+    padding: 2px;
+    border-radius: 5%;
+}
+
+.numbers-stats {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.page-info-inst {
+    background-color: #eeeeee;
+    margin: 2%;
+    border-radius: 5px;
+    border: solid 2px #b5b5b6;
+}
+
+.stat-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: #ababab;
+    font-size: small;
+}
+
+.user-statistic {
+    display: flex;
+}
+
+.block-following {
+    height: 50px;
+    border-radius: 0px;
+    border: solid 2px #b5b5b6; 
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    
+}
+
+.btn-following {
+    display: inline-block;
+
+    width: 300px;
+    height: 30px;
+    margin: 5%;
+    margin-top: 3%;
+    background: rgb(66,132,32);
+    background: linear-gradient(0deg, rgba(66,132,32,1) 0%, rgba(111,186,88,1) 100%);
+    border: solid 2px #5b8e48;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.more-user-info {
+    border-top: solid 2px #b5b5b6;     
+}

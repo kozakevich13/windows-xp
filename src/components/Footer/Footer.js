@@ -14,11 +14,11 @@ function say() {
 }
 setInterval(getActualtime, 1000)
 
-function getActualtime() {
-  let actualHour = new Date().getHours() 
-  let actualMinute = new Date().getMinutes() 
-  setTime(`${actualHour}:${actualMinute}`)
+function getActualtime () {
+  var date = new Date();
+  setTime (date.toLocaleTimeString([], {timeStyle: 'short'}))
 }
+
   return (
     <div className='footer'>
         <button  className='btn-start' onClick={()=>{say()}}>

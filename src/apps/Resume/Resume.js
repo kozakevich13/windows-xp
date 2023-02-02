@@ -1,4 +1,5 @@
-import './Word.css';
+import React, {useState} from 'react'
+import './Resume.css';
 import i_new from '../../img/word/New.bmp'
 import i_open from '../../img/word/Open.bmp'
 import i_save from '../../img/word/save.bmp'
@@ -24,8 +25,10 @@ import i_indent from '../../img/word/indent.bmp'
 import i_highlight from '../../img/word/highlight.bmp'
 import i_fontcolor from '../../img/word/fontcolor.bmp'
 
-function Word() {
-  
+
+
+function Resume() {
+ 
   return (
     <div className='main-container-word'>
       <div className='word-header'>
@@ -103,6 +106,7 @@ function Word() {
           <div  style={{ backgroundImage: `url(${i_bold})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_italic})` }} className='toolbar-item'></div>
           <div  style={{ backgroundImage: `url(${i_underline})` }} className='toolbar-item'></div>
+          
           <div className="vl-toolbar"></div>
           <div className="vl-toolbar-white"></div>
           <div  style={{ backgroundImage: `url(${i_left})` }} className='toolbar-item'></div>
@@ -122,7 +126,13 @@ function Word() {
         </div>
       </div>
       <div className='working-area-word'>
-        <textarea className='text-area-word'>its word</textarea>
+        <div className='text-area-word'>
+          <iframe
+            src="https://drive.google.com/file/d/1k7tycyZXUNuDQtP2Vnn5WFncFcr3yPHM/preview"
+            className='test'
+          >
+          </iframe>
+        </div>
         <div className='scroll'>
           <div className='scroll-btn'>
           </div>
@@ -132,4 +142,4 @@ function Word() {
   );
 }
 
-export default Word;
+export default Resume;
