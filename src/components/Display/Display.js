@@ -32,8 +32,8 @@ const initialLayout = [
   { i: "2", x: 5, y: 0, w: 5, h: 2 },
   { i: "3", x: 8, y: 0, w: 5, h: 2 },
   { i: "4", x: 2, y: 0, w: 5, h: 4, minW: 4 },
-  { i: "5", x: 6, y: 0, w: 5, h: 4 },
-  { i: "6", x: 4, y: 0, w: 4, h: 4, minW: 4, maxW: 4 }
+  { i: "5", x: 6, y: 0, w: 5, h: 4, minW: 5 },
+  { i: "6", x: 4, y: 0, w: 3, h: 4, minW: 3, maxW: 3 }
 
 ];
 
@@ -62,7 +62,7 @@ function Display({setMessage}) {
       layout.concat({
         i: String(addedLayout.i),
         x: addedLayout.x,
-        minW: 4,
+        minW: addedLayout.minW,
         y: addedLayout.y,
         minH: 4,
         w: addedLayout.w,
