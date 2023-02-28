@@ -14,7 +14,7 @@ function Instagram() {
     
       .then(response => response.json())
       .then(data => {
-        setFeed(data)
+        setFeed(data.data)
       });
   }, []);
 
@@ -54,7 +54,7 @@ function Instagram() {
                     </div>
                 </div>
                 <div className='block-following'>
-                  <a href="https://www.instagram.com/vitaliy_kozakevich/" className='btn-following'>Following</a>
+                  <a href="https://www.instagram.com/vitaliy_kozakevich/" className='btn-following'><p className='following'>Following</p></a>
                 </div>
             </div>
           </div>
@@ -64,7 +64,20 @@ function Instagram() {
             <p className='user-description'>🐱‍👤I’m a web developer. 🐱‍🏍I spend my whole day, practically every day, experimenting with HTML, CSS, and JavaScript. 🐱‍💻</p>
             <a  className='user-link' href='https://www.linkedin.com/in/vitaliy-kozakevich-492623237/'>Linkedin.com</a>
           </div>
+        </div>
 
+        <div className='instagram-feed-container'>
+            {feed ? (
+              <ul className='instagram-feed'>
+                {feed.map((item) => (
+                  <li className='post-background' key={item.id}>
+                    <img className='post-img' src={item.media_url}></img>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>Loading...</p>
+            )}
         </div>
       </div>
       
